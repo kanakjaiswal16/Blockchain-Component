@@ -1,0 +1,37 @@
+.block {
+  background-color: #f9f9f9;
+  border: 2px solid black;
+  width: 250px;
+  height: 416px;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.data {
+  background-color: #e5eecc;
+  padding: 5px;
+}
+
+.blockHash {
+  background-color: #ffe4c4;
+  padding: 5px;
+}
+
+.previousHash {
+  background-color: #b0c4de;
+  padding: 5px;
+}
+
+.block p {
+  max-width: 400px;
+  overflow-wrap: break-word;
+}
+
+.nonce {
+  background-color: #FFA07A;
+  padding: 5px;
+  font-size: 14px;
+}
