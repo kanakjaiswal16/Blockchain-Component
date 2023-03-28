@@ -20,10 +20,15 @@ class BlockChain {
   constructor() {
     const genesisPreviousHash = generateHash("0x000000");
     const genesisData = "Genesis Block";
-    const genesisBlockHash = generateHash(genesisData);
+    let nonce = 0;
+    let genesisBlockHash = generateHash(genesisData + nonce);
+    while (!genesisBlockHash.startsWith("0000")) {
+      nonce++;
+      genesisBlockHash = generateHash(genesisData + nonce);
+    }
 
     const genesisBlock = new Block(
-      0,
+      nonce,
       genesisData,
       genesisBlockHash,
       genesisPreviousHash
